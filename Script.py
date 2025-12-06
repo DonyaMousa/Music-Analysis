@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-df_track = pd.read_csv("../input/spotify-datasets/tracks.csv")
+df_track = pd.read_csv("input/spotify-datasets/tracks.csv")
 print(df_track.head())
 
 # null values
@@ -37,8 +37,7 @@ print(df_track.info())
 print(df_track[df_track["duration"] == 5621]["artists"])
 
 # Correlation heatmap
-corr_df = df_track.drop(["key", "mode", "explicit"], axis=1).corr(method="pearson")
-plt.figure(figsize=(14, 6))
+corr_df = df_track.select_dtypes(include=[np.number]).drop(["key", "mode", "explicit"], axis=1).corr(method="pearson")
 heatmap = sns.heatmap(corr_df, annot=True, vmin=-1, vmax=1, center=0, cmap="inferno")
 heatmap.set_title("Correlation Heatmap")
 heatmap.set_xticklabels(heatmap.get_xticklabels(), rotation=90)
