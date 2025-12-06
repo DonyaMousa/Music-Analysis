@@ -164,7 +164,7 @@ python visualizations.py
 ## 📊 Visualizations
 
 ### 1. Correlation Heatmap
-![Correlation Heatmap](output/correlation_heatmap.png)
+![Correlation Heatmap](/outputTest/correlation_heatmap.png)
 
 **Description**: Comprehensive view of relationships between all numeric audio features. Color intensity indicates correlation strength (yellow = positive, purple = negative).
 
@@ -176,7 +176,7 @@ python visualizations.py
 ---
 
 ### 2. Loudness vs Energy Regression
-![Loudness vs Energy](output/loudness_vs_energy.png)
+![Loudness vs Energy](/outputTest/loudness_vs_energy.png)
 
 **Description**: Strong positive relationship (r=0.76) demonstrating that high-energy tracks are consistently louder. The tight clustering around the regression line indicates a reliable pattern.
 
@@ -188,7 +188,7 @@ python visualizations.py
 ---
 
 ### 3. Popularity vs Acousticness Regression
-![Popularity vs Acousticness](output/popularity_vs_acousticness.png)
+![Popularity vs Acousticness](/outputTest/popularity_vs_acousticness.png)
 
 **Description**: Moderate negative relationship (r=-0.37) showing popular songs tend to be less acoustic. Wide scatter indicates other factors strongly influence popularity.
 
@@ -200,7 +200,7 @@ python visualizations.py
 ---
 
 ### 4. Song Releases Over Time
-![Release Distribution](output/songs_per_year.png)
+![Release Distribution](/outputTest/songs_per_year.png)
 
 **Description**: Exponential growth in digitally available music, particularly after 2000, reflecting the streaming revolution.
 
@@ -212,7 +212,7 @@ python visualizations.py
 ---
 
 ### 5. Duration Trends by Year (Bar Plot)
-![Duration Trends Bar](output/duration_vs_year_bar.png)
+![Duration Trends Bar](/outputTest/duration_vs_year_bar.png)
 
 **Description**: Bar chart showing average song duration trends across decades, revealing the shift toward shorter tracks in the streaming era.
 
@@ -224,7 +224,7 @@ python visualizations.py
 ---
 
 ### 6. Duration Trends by Year (Line Plot)
-![Duration Trends Line](output/duration_vs_year_line.png)
+![Duration Trends Line](/outputTest/duration_vs_year_line.png)
 
 **Description**: Line plot with confidence intervals showing the same duration trend, highlighting the consistency of the shortening pattern.
 
@@ -236,7 +236,7 @@ python visualizations.py
 ---
 
 ### 7. Duration by Genre
-![Genre Duration](output/duration_by_genre.png)
+![Genre Duration](/outputTest/duration_by_genre.png)
 
 **Description**: Horizontal bar chart comparing average song duration across different genres.
 
@@ -248,7 +248,7 @@ python visualizations.py
 ---
 
 ### 8. Top Genres by Popularity
-![Top Genres](output/top_genres_popularity.png)
+![Top Genres](/outputTest/top_genres_popularity.png)
 
 **Description**: Shows which genres dominate among the most popular tracks in the dataset.
 
@@ -370,10 +370,7 @@ Contributions are welcome! Please follow these steps:
 
 ## 📄 License
 
-This project is open-source
-
-```
-```
+This is an open-source project
 
 
 ---
