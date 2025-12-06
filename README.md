@@ -1,14 +1,12 @@
-# 🎵 Spotify Music Data Analysis
+# 🎵 Spotify Music Data Analysis 🎵
 
 <div align="center">
 
-![Project Banner](path/to/your/banner-image.png)
+![Project Banner](/assets/Github%20Header%20Banner.png)
 
 *Uncovering the Patterns Behind 586,672 Songs*
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Pandas](https://img.shields.io/badge/Pandas-1.3+-green.svg)](https://pandas.pydata.org/)
-[![Seaborn](https://img.shields.io/badge/Seaborn-0.11+-orange.svg)](https://seaborn.pydata.org/)
+[![Linkedin](https://img.shields.io/badge/Linkedin-Follow%20Dev-blue?style=flat-square&logo=Linkedin)](https://www.linkedin.com/in/donya-mousa-628226253/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [Overview](#overview) • [Features](#features) • [Installation](#installation) • [Results](#results) • [Visualizations](#visualizations)
@@ -46,35 +44,16 @@ This project performs comprehensive exploratory data analysis (EDA) on Spotify's
 
 ## 📊 Dataset Information
 
-### Primary Dataset: `tracks.csv`
-- **Total Tracks**: 586,672 songs
-- **Features**: 20 columns
-- **Source**: Spotify API
-- **Time Period**: 1920s - 2020s
+```bash
+spotify-dataset
+```
+[![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/lehaknarnauli/spotify-datasets/code)
 
-### Feature Descriptions
+```bash
+SpotifyFeatures
+```
 
-| Feature | Type | Range | Description |
-|---------|------|-------|-------------|
-| `id` | String | - | Unique Spotify track identifier |
-| `name` | String | - | Song title |
-| `popularity` | Integer | 0-100 | Popularity score based on streams |
-| `duration_ms` | Integer | - | Track length in milliseconds |
-| `explicit` | Binary | 0-1 | Contains explicit content |
-| `artists` | String | - | Artist name(s) |
-| `release_date` | Date | - | Release date |
-| `danceability` | Float | 0-1 | How suitable for dancing |
-| `energy` | Float | 0-1 | Intensity and activity measure |
-| `key` | Integer | 0-11 | Musical key (C, C#, D, etc.) |
-| `loudness` | Float | -60-0 | Overall loudness in decibels |
-| `mode` | Binary | 0-1 | Major (1) or Minor (0) |
-| `speechiness` | Float | 0-1 | Presence of spoken words |
-| `acousticness` | Float | 0-1 | Confidence of acoustic sound |
-| `instrumentalness` | Float | 0-1 | Predicts lack of vocals |
-| `liveness` | Float | 0-1 | Presence of audience |
-| `valence` | Float | 0-1 | Musical positiveness/happiness |
-| `tempo` | Float | 0-250+ | Beats per minute (BPM) |
-| `time_signature` | Integer | 3-7 | Time signature (beats per bar) |
+[![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db)
 
 ---
 
@@ -85,19 +64,10 @@ This project performs comprehensive exploratory data analysis (EDA) on Spotify's
 Python 3.8 or higher
 pip package manager
 ```
-
-### Setup Instructions
-
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/spotify-music-analysis.git
-cd spotify-music-analysis
-```
-
-2. **Create virtual environment** (optional but recommended)
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+git clone https://github.com/DonyaMousa/Music-Analysis
+cd Music-Analysis
 ```
 
 3. **Install dependencies**
@@ -109,34 +79,21 @@ pip install -r requirements.txt
 - Place `tracks.csv` in `input/spotify-datasets/`
 - Place `SpotifyFeatures.csv` in `input/ultimate-spotify-tracks-db/`
 
-5. **Run the analysis**
+5. **Run**
 ```bash
-python Script.py
+python data-analysis.py 
+python visualizations.py
 ```
 
 ---
 
-## 📈 Key Findings
+## 📈 Output
 
-### 1. Correlation Analysis
+### [1. spotify_data_analysis_tables.xlsx](https://github.com/DonyaMousa/Music-Analysis/blob/main/spotify_data_analysis_tables.xlsx)
 
-Our correlation heatmap revealed several significant relationships:
+📊 Single Excel File Contains 24 Sheets:
+| ![Sheets](/outputTest/Sheets.png) |
 
-#### 🔥 Strong Positive Correlations
-| Feature Pair | Correlation | Interpretation |
-|--------------|-------------|----------------|
-| **Energy ↔ Loudness** | **0.76** | High-energy songs are significantly louder |
-| **Danceability ↔ Valence** | **0.53** | Danceable songs tend to be happier/more positive |
-| **Energy ↔ Valence** | **0.37** | Energetic songs are more likely to be upbeat |
-
-#### 🧊 Strong Negative Correlations
-| Feature Pair | Correlation | Interpretation |
-|--------------|-------------|----------------|
-| **Energy ↔ Acousticness** | **-0.72** | Acoustic songs are typically less energetic |
-| **Loudness ↔ Acousticness** | **-0.52** | Acoustic tracks are quieter than produced tracks |
-| **Popularity ↔ Acousticness** | **-0.37** | Popular songs tend to be more produced/electronic |
-
-### 2. The Popularity Paradox
 
 > **Critical Finding**: Audio features alone cannot predict song popularity!
 
@@ -302,28 +259,6 @@ Our correlation heatmap revealed several significant relationships:
 
 ---
 
-## 💡 Business Insights
-
-### For Record Labels
-✅ **Production Focus**: Invest in high-energy, well-produced tracks over purely acoustic ones  
-✅ **Marketing Matters**: Audio quality alone doesn't guarantee success; marketing budget is crucial  
-✅ **Duration Strategy**: Consider 3-minute format for maximum streaming potential  
-✅ **Genre Selection**: Pop and Hip-Hop show highest popularity potential
-
-### For Artists
-✅ **Genre Alignment**: Understand your genre's typical audio profile  
-✅ **Acoustic Balance**: Pure acoustic may limit mainstream appeal  
-✅ **Energy Optimization**: Higher energy correlates with better engagement  
-✅ **Strategic Length**: Keep tracks concise for playlist inclusion
-
-### For Streaming Platforms
-✅ **Recommendation Algorithms**: Use multi-feature similarity (not single-feature matching)  
-✅ **Playlist Curation**: Balance energy and valence for mood-based playlists  
-✅ **Discovery Features**: Don't over-rely on audio features; incorporate social signals  
-✅ **Trend Adaptation**: Account for evolving duration preferences
-
----
-
 ## 🔬 Methodology
 
 ### Data Cleaning
@@ -346,28 +281,6 @@ Data Loading → Quality Check → Transformation →
 Statistical Analysis → Correlation Computation → 
 Visualization → Temporal Analysis → Genre Comparison
 ```
-
-### Code Workflow
-```python
-# 1. Load and explore data
-df_track = pd.read_csv("tracks.csv")
-
-# 2. Clean and transform
-df_track["duration"] = df_track["duration_ms"] / 1000
-df_track["year"] = pd.to_datetime(df_track["release_date"]).dt.year
-
-# 3. Correlation analysis
-corr_df = df_track.select_dtypes(include=[np.number]).drop(
-    ["key", "mode", "explicit"], axis=1
-).corr(method="pearson")
-
-# 4. Visualize patterns
-sns.heatmap(corr_df, annot=True, cmap="inferno")
-
-# 5. Temporal analysis
-sns.lineplot(x="year", y="duration", data=df_track)
-```
-
 ---
 
 ## 📁 Project Structure
@@ -381,13 +294,14 @@ spotify-music-analysis/
 │   └── ultimate-spotify-tracks-db/
 │       └── SpotifyFeatures.csv          # Genre dataset
 │
-├── output/
+├── outputTest/
 │   ├── correlation_heatmap.png          # Feature correlation matrix
 │   ├── loudness_vs_energy.png           # Regression plot
 │   ├── popularity_vs_acousticness.png   # Regression plot
 │   ├── songs_per_year.png               # Distribution histogram
 │   ├── duration_vs_year_bar.png         # Bar chart
 │   ├── duration_vs_year_line.png        # Line plot
+│   ├── spotify_data_analysis_tables.xlsx# Sheets
 │   ├── duration_by_genre.png            # Genre comparison
 │   └── top_genres_popularity.png        # Top genres chart
 │
@@ -415,26 +329,7 @@ scipy>=1.7.0
 **Installation Command**:
 ```bash
 pip install -r requirements.txt
-```
-
----
-
-## 🎓 Key Learnings
-
-### Statistical Concepts Applied
-- **Pearson Correlation**: Measures linear relationships between variables
-- **Regression Analysis**: Predicts one variable from another
-- **Descriptive Statistics**: Summarizes data distributions
-- **Time Series Analysis**: Examines trends over time
-- **Sampling Theory**: Represents large datasets efficiently
-
-### Data Science Skills Demonstrated
-✅ Data cleaning and preprocessing  
-✅ Exploratory data analysis (EDA)  
-✅ Statistical correlation analysis  
-✅ Data visualization best practices  
-✅ Temporal trend identification  
-✅ Business insight extraction  
+``` 
 
 ---
 
@@ -447,13 +342,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-### Contribution Ideas
-- Add machine learning models for prediction
-- Implement interactive dashboards
-- Analyze additional datasets
-- Create genre classification algorithms
-- Build recommendation systems
 
 ---
 
@@ -472,94 +360,37 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📚 References
+## 👨‍💻 Author: Donya Mousa
 
-- [Spotify Web API Documentation](https://developer.spotify.com/documentation/web-api/)
-- [Audio Features Explanation](https://developer.spotify.com/documentation/web-api/reference/get-audio-features)
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-- [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
-- [Pearson Correlation Coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
-
----
-
-## ❓ FAQ
-
-**Q: Where can I get the dataset?**  
-A: The dataset is available on Kaggle. Search for "Spotify Tracks Dataset" or use the API.
-
-**Q: How long does the analysis take to run?**  
-A: Approximately 2-5 minutes depending on your system specifications.
-
-**Q: Can I use this for my own project?**  
-A: Yes! This project is open-source under MIT License. Attribution is appreciated.
-
-**Q: Why are some correlations negative?**  
-A: Negative correlation means as one feature increases, the other decreases (inverse relationship).
-
-**Q: How accurate is the popularity prediction?**  
-A: Audio features alone show weak prediction power (r<0.35), confirming that non-audio factors dominate success.
-
----
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-- Portfolio: [yourwebsite.com](https://yourwebsite.com)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DonyaMousa)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/donya-mousa-628226253/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:donyamousv@gmail.com)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open-source
 
 ```
-MIT License
-
-Copyright (c) 2024 Your Name
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ```
 
----
-
-## 🙏 Acknowledgments
-
-- **Spotify** for providing comprehensive audio feature data through their API
-- **Kaggle Community** for curating and sharing the dataset
-- **Open Source Contributors** for pandas, matplotlib, seaborn, and numpy
-- **Data Science Community** for methodological guidance and best practices
 
 ---
 
 ## 📊 Project Statistics
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/spotify-music-analysis)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/spotify-music-analysis?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/spotify-music-analysis?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/spotify-music-analysis)
-
+[![GitHub repo size](https://img.shields.io/github/repo-size/DonyaMousa/Music-Analysis)](https://github.com/yourusername/spotify-music-analysis)
+![GitHub stars](https://img.shields.io/github/stars/DonyaMousa/Music-Analysis?style=social)
+[![GitHub forks](https://img.shields.io/github/forks/DonyaMousa/Music-Analysis?style=social)](https://github.com/yourusername/spotify-music-analysis/network/members)
+![GitHub issues](https://img.shields.io/github/issues/DonyaMousa/Music-Analysis) 
 ---
 
 ## 🌟 Star History
 
 If you found this project helpful, please consider giving it a star! It helps others discover the project.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/spotify-music-analysis&type=Date)](https://star-history.com/#yourusername/spotify-music-analysis&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=DonyaMousa/Music-Analysis&type=Date)](https://star-history.com/#yourusername/spotify-music-analysis&Date)
 
 ---
 
@@ -567,10 +398,9 @@ If you found this project helpful, please consider giving it a star! It helps ot
 
 ### ⭐ If you found this project useful, please give it a star!
 
-**Made with ❤️ and 🎵 by [Your Name]**
+**Made with ❤️ and 🎵**
 
 ---
 
-*"Data is the new music notation." - Anonymous*
 
 </div>
